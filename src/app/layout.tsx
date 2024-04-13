@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {Inter , Poppins} from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/navbar";
+import Footer from "@/components/footer";
+import {QueryClientProvider} from "react-query";
+import ReactQueryClientProvider from "@/lib/query_client_provider";
+import {Toaster} from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({subsets:['latin'], weight:'600'})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +22,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${poppins.className} font-sans dark min-h-screen w-full`} >
+           <ReactQueryClientProvider >
+               <div className="h-screen flex flex-col justify-between">
+                   <NavBar />
+                   {children}
+                   <Footer />
+                   <Toaster />
+               </div>
+           </ReactQueryClientProvider>
+
+      </body>
     </html>
   );
 }

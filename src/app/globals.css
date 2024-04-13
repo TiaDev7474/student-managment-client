@@ -4,65 +4,48 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-
+    --background: 75 80% 98%;
+    --foreground: 83 80% 4%;
+    --card: 75 80% 98%;
+    --card-foreground: 83 80% 4%;
+    --popover: 75 80% 98%;
+    --popover-foreground: 83 80% 4%;
+    --primary: 77 85% 54%;
+    --primary-foreground: 83 80% 4%;
+    --secondary: 149 86% 70%;
+    --secondary-foreground: 83 80% 4%;
+    --muted: 75 80% 20%;
+    --muted-foreground: 83 80% 70%;
+    --accent: 177 85% 63%;
+    --accent-foreground: 83 80% 4%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 83 80% 4%;
+    --border: 75 80% 20%;
+    --input: 75 80% 20%;
+    --ring: 177 85% 40%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --background: 75 80% 2%;
+    --foreground: 83 80% 96%;
+    --card: 75 80% 2%;
+    --card-foreground: 83 80% 96%;
+    --popover: 75 80% 2%;
+    --popover-foreground: 83 80% 96%;
+    --primary: 77 85% 46%;
+    --primary-foreground: 75 80% 2%;
+    --secondary: 149 86% 30%;
+    --secondary-foreground: 75 80% 2%;
+    --muted: 75 80% 80%;
+    --muted-foreground: 83 80% 96%;
+    --accent: 177 85% 37%;
+    --accent-foreground: 75 80% 2%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 83 80% 10%;
+    --border: 75 80% 60%;
+    --input: 75 80% 80%;
+    --ring: 177 85% 60%;
   }
 }
 
@@ -73,4 +56,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  .border-b-dim-gray {
+     @apply border-b-white
+  }
+}
+
+.recharts-text {
+  color: white;
 }
